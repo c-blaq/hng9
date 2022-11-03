@@ -10,6 +10,7 @@ function App() {
         <div id="first-stage">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>
