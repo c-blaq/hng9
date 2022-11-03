@@ -8,10 +8,6 @@ footer {
   gap: 16px;
 }
 
-h2 {
-  font-size: 24px;
-}
-
 span {
   color: #667085;
 }
@@ -21,12 +17,7 @@ span {
     flex-direction: column;
     align-items: flex-start;
   }
-  h2 {
-    font-size: 18px;
-  }
-  span {
-    font-size: 14px;
-  }
+
   img {
     width: 100px;
     height: 24px;
