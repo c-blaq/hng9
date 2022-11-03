@@ -38,6 +38,10 @@ const LinkSection = () => {
           principles.
         </sub>
       </a>
+
+      <a href="contact" id="contact">
+        Contact Me
+      </a>
     </section>
   );
 };
