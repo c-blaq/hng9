@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PageLayout from "../../Layout/layout";
+import FormInput from "../../components/FormInput/FormInput";
 
 const Contact = () => {
   const [firstName, setFirstName] = useState("");
@@ -42,68 +43,37 @@ const Contact = () => {
           onSubmit={handleSubmit}
         >
           <div className="m-0 text-left flex flex-col gap-6 sm:flex-row">
-            <div className="m-0 text-left">
-              <label
-                htmlFor="first_name"
-                className="text-gray-700 sm:flex-1 text-sm font-medium"
-              >
-                First name
-                <input
-                  type="text"
-                  id="first_name"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                  placeholder="Enter your first name"
-                  className="w-full outline-1 outline-blue-200 mt-1 border border-gray-300 py-2 px-3 rounded-lg"
-                />
-              </label>
-              {firstName.length === 0 && (
-                <span className="text-red-600 text-sm">{errorMessage}</span>
-              )}
-            </div>
-
-            <div className="text-lefy m-0">
-              <label
-                htmlFor="last_name"
-                className="text-gray-700 text-sm font-medium flex-1"
-              >
-                Last name
-                <input
-                  type="text"
-                  id="last_name"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                  placeholder="Enter your last name"
-                  className="w-full  outline-1 outline-blue-200 mt-1 border border-gray-300 py-2 px-3 rounded-lg"
-                />
-              </label>
-              {lastName.length === 0 && (
-                <span className="text-red-600 text-sm">{errorMessage}</span>
-              )}
-            </div>
+            <FormInput
+              label="First Name"
+              type="text"
+              id="first_name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              placeholder="Enter your first name"
+              errorMessage={errorMessage}
+            />
+            <FormInput
+              label="Last Name"
+              type="text"
+              id="last_name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              placeholder="Enter your last name"
+              errorMessage={errorMessage}
+            />
           </div>
 
-          <div className="m-0 text-left">
-            <label
-              htmlFor="email"
-              className="text-gray-700 text-sm font-medium"
-            >
-              Email
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="yourname@gmail.com"
-                className="w-full outline-1 outline-blue-200 mt-1 border border-gray-300 py-2 px-3 rounded-lg"
-              />
-            </label>
-            {email.length === 0 && (
-              <span className="text-red-600 text-sm">{errorMessage}</span>
-            )}
-          </div>
+          <FormInput
+            label="Email"
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="yourname@gmail.com"
+            errorMessage={errorMessage}
+          />
 
-          <div>
+          <div className="mt-0 text-left">
             <label
               htmlFor="message"
               className="text-gray-700 text-sm font-medium"
@@ -114,18 +84,18 @@ const Contact = () => {
                 value={message}
                 onChange={(e) => SetMessage(e.target.value)}
                 placeholder="Send me a message and I'll reply you as soon as possible"
-                className="border p-3 border-gray-300 mt-1 w-full h-[132px]"
+                className="border outline-blue-300 p-3 border-gray-300 mt-1 w-full h-[132px]"
               ></textarea>
             </label>
             {message.length === 0 && (
-              <span className="text-red-600 text-sm">{errorMessage}</span>
+              <span className="text-red-600 text-sm mt-1">{errorMessage}</span>
             )}
           </div>
 
           <div className="text-gray-700 text-left m-0 flex items-stretch text-sm font-medium">
             <input
               type="checkbox"
-              className="h-fit mt-1"
+              className="h-fit mt-1 outline-blue-300 border border-gray-300"
               onClick={() => setChecked(!checked)}
             />
             <span className="px-3 text-gray-600">
