@@ -95,7 +95,7 @@ const Contact = () => {
           <div className="text-gray-700 text-left m-0 flex items-stretch text-sm font-medium">
             <input
               type="checkbox"
-              className="h-fit mt-1 outline-blue-300 border border-gray-300"
+              className="h-fit mt-1 outline-blue-300 border border-x-gray-300"
               onClick={() => setChecked(!checked)}
             />
             <span className="px-3 text-gray-600">

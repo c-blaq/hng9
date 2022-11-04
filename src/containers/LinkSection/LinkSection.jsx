@@ -39,7 +39,7 @@ const LinkSection = () => {
         </sub>
       </a>
 
-      <a href="contact" id="contact">
+      <a href="/contact" id="contact">
         Contact Me
       </a>
     </section>
